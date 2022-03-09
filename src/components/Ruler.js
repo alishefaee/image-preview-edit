@@ -7,19 +7,19 @@ function Rulers({imageWidth, imageHeight}) {
     const rulerVertical = useRef()
 
 
-    function handleResize() {
-        rulerHorizontal.current.resize();
-        rulerVertical.current.resize();
-    }
+    // function handleResize() {
+    //     rulerHorizontal.current.resize();
+    //     rulerVertical.current.resize();
+    // }
 
-    useEffect(() => {
-        rulerHorizontal.current.resize();
-        rulerVertical.current.resize();
-        console.log("offsetWidth")
-
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, [])
+    // useEffect(() => {
+    //     rulerHorizontal.current.resize();
+    //     rulerVertical.current.resize();
+    //     console.log("offsetWidth")
+    //
+    //     window.addEventListener("resize", handleResize);
+    //     return () => window.removeEventListener("resize", handleResize);
+    // }, [])
 
 
     return (

@@ -5,7 +5,7 @@ import './App.css';
 import Rulers from "./components/Ruler";
 import {Stack} from "@mui/material";
 import Dropzone from 'react-dropzone'
-import Image from "./components/Image";
+import Board from "./components/Board";
 
 function App() {
     const [files, setFiles] = useState([])
@@ -47,7 +47,8 @@ function App() {
         <ThemeProvider theme={theme}>
             <Stack direction="row" spacing={2} sx={{alignItems: 'stretch'}}>
                 <div className='setting1' ref={train}>
-                    {files.length && <Image preview={files[0].preview}  setImageWidth={setImageWidth} setImageHeight={setImageHeight}/>}
+                    {console.log(imageWidth)}
+                    {files.length && <Board preview={files[0].preview} setImageWidth={setImageWidth} imageWidth={imageWidth} imageHeight={imageHeight} setImageHeight={setImageHeight}/>}
                     {(imageWidth!==0) && <Rulers imageWidth={imageWidth} imageHeight={imageHeight}/>}
                 </div>
                 <div className='setting'>
